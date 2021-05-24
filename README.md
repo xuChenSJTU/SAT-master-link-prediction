@@ -1,35 +1,28 @@
-# SAT-master-online. 
+# SAT-master-online.  
 This is a Pytorch implementation of our "Learning on Attribute-Missing Graphs" in terms of the link prediction task.  
-The codes of node attribute completion task are on: https://github.com/xuChenSJTU/SAT-master-online
- 
-####################################################################################. 
-1. It is accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2020. 
-You can access the paper in: https://ieeexplore.ieee.org/document/9229522 or https://arxiv.org/abs/2011.01623     
+The codes of node attribute completion task are on: https://github.com/xuChenSJTU/SAT-master-online    
 
-2. An old version of our paper is in: https://arxiv.org/abs/1907.09708   
-
-################# Requirements ########################.   
+## Requirements 
 networkx==2.2.   
-pytorch>=1.0.  
+pytorch>=1.0.
 python>=3.5.  
 
-################# Notes ########################. 
-1. This code is an example code for the node attribute completion task of our SAT paper.  
+**some notes**:   
+1. This code is an example code for the link prediction task of our SAT paper.  
 2. Some example backbones and datasets are provided so that you can directly run them.  
 3. Note the name "NANG" appears in ours codes is exactly the name of our "SAT" method.  
 "NANG" (Node Attribute Neural Generator) is an old name we used in the previous version.  
 
-################# Usage ########################.   
+## How to use  
 This dir contains:  
 1. NANG's code (NANG_main.py). 
-With special parameter setting in NANG_main.py we can get the NANG-no cross, NANG-no self and NANG-no adver in our paper. 
+With special parameter setting in NANG_main.py we can get the NANG-no cross, NANG-no self and NANG-no adver in our paper.  
 
 2. Data process (precoess.py in ./data), note this file is only used for steam dataset. For cora, citeseer and pubmed, they 
 are processed during training.  
 
 3. Examples of datasets including cora, citeseer, pubmed and steam (in ./data). 
 
-How to use:  
 **Step1**: process the data, if you want to do the experiment of Steam, you need to. 
 preprocess it first (other datasets are already processed), so check the parameter. 
 setting and run the code in ./data/process.py using:  
@@ -112,13 +105,16 @@ CUDA_VISIBLE_DEVICES=GPU_num python NANG_main.py
 CPU mode:    
 CUDA_VISIBLE_DEVICES=<space> python NANG_main.py   
 
-**Step3**: After you run NANG_main.py, for Cora, Citeseer and Steam, it will directly print the link prediction results.   
+**Step3**: After you run NANG_main.py, for Cora, Citeseer and Steam, it will directly print the link prediction results.  
+ 
+ 
+## Reference and Other Information. 
+1. It is accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2020. 
+You can access the paper in: https://ieeexplore.ieee.org/document/9229522 or https://arxiv.org/abs/2011.01623     
 
+2. An old version of our paper is in: https://arxiv.org/abs/1907.09708    
 
-#####################Other things#############################.  
-1. Thanks for your interest in our paper. I am busy in these days, I would provide more related codes when I am free.    
-
-2. If you find the codes or dataset (i.e. steam) useful, please cite our paper, Thank you!  
+3. Thanks for your interest in our paper.  If you find the codes or dataset (i.e. steam) useful, please cite our paper, Thank you!  
 @article{chen2020learning,  
   title={Learning on Attribute-Missing Graphs},  
   author={Xu Chen and Siheng Chen and Jiangchao Yao and Huangjie Zheng and Ya Zhang and Ivor W Tsang},  
